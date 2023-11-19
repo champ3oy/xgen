@@ -1,40 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# xgen
+
+## Overview
+
+xgen is a simple API designed to dynamically generate Open Graph (OG) images for websites, enhancing their visual representation when shared on social media platforms. This README provides essential information on how to integrate and use xgen to create personalized OG images for your website.
 
 ## Getting Started
 
-First, run the development server:
+### Installation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+No installation is required for xgen. Simply make HTTP requests to the provided endpoint with the target URL.
+
+### API Endpoint
+
+```
+GET /api/og?url=<website-url>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Replace `<website-url>` with the URL of the webpage you want to generate an OG image for.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Example
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+curl http://localhost:3000/api/og?url=https://your-website.com
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+This will return a dynamically generated OG image for the specified website.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
 
-## Learn More
+1. **Dynamic Image Generation:** On-demand creation of OG images based on provided website URLs.
 
-To learn more about Next.js, take a look at the following resources:
+2. **Metadata Integration:** Utilizes website metadata (title, description, keywords) for personalized and relevant OG images.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Easy Integration:** Simple HTTP GET requests to the API endpoint without the need for complex setup.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. **Responsive Design:** Ensures visually stunning OG images that adapt to various screen sizes and resolutions.
 
-## Deploy on Vercel
+5. **Real-time Updates:** Automatically updates OG images based on the latest metadata, keeping shared links fresh.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Use Cases
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Enhance Social Media Shares:** Make your shared links stand out with visually appealing OG images.
+
+- **Personalized Previews:** Dynamically generate OG images tailored to the content of each webpage.
+
+- **Effortless Integration:** Seamlessly incorporate OG image generation into your website or application.
+
+## Contributing
+
+Feel free to contribute to the development of xgen. Check out the [CONTRIBUTING.md](CONTRIBUTING.md) file for details on our code of conduct and the process for submitting pull requests.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- @cirlormx
